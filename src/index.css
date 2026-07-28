@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist Sans", sans-serif;
+  
+  --color-background: hsl(260 87% 3%);
+  --color-foreground: hsl(40 6% 95%);
+  
+  --color-primary: hsl(121 95% 76%);
+  --color-primary-foreground: hsl(0 0% 5%);
+  
+  --color-hero-heading: hsl(40 10% 96%);
+  --color-hero-sub: hsl(40 6% 82%);
+  
+  --color-muted: hsl(240 4% 16%);
+  --color-border: hsl(240 4% 20%);
+  
+  --animate-marquee: marquee 20s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+@layer utilities {
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.01);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(4px);
+    border: none;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1.4px;
+    background: linear-gradient(180deg,
+      rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+      rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+      rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+}
