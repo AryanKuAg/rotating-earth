@@ -1,7 +1,7 @@
 import { ChevronDown, ChevronRight, Crosshair } from 'lucide-react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from './lib/utils';
-import { ButtonHTMLAttributes, forwardRef } from 'react';
+import { forwardRef, type ButtonHTMLAttributes } from 'react';
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
@@ -39,7 +39,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button"
 
 function App() {
-  const brands = ["Vortex", "Nimbus", "Prysma", "Cirrus", "Kynder", "Halcyn"];
+  const brands = ["Aether", "Helios", "Zenith", "Stratus", "Novus", "Atlas"];
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-background text-foreground flex flex-col font-sans antialiased">
@@ -64,21 +64,21 @@ function App() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center">
                 <Crosshair className="w-5 h-5 text-primary" />
               </div>
-              <span className="text-xl font-semibold tracking-wide">APEX</span>
+              <span className="text-xl font-semibold tracking-wide">NEXUS</span>
             </div>
 
             <div className="hidden md:flex items-center gap-8">
               <a href="#" className="text-base text-foreground/90 hover:text-foreground flex items-center gap-1 transition-colors">
-                Features <ChevronDown className="w-4 h-4 opacity-50" />
+                Infrastructure <ChevronDown className="w-4 h-4 opacity-50" />
               </a>
               <a href="#" className="text-base text-foreground/90 hover:text-foreground transition-colors">
-                Solutions
+                Edge Network
               </a>
               <a href="#" className="text-base text-foreground/90 hover:text-foreground transition-colors">
-                Plans
+                Pricing
               </a>
               <a href="#" className="text-base text-foreground/90 hover:text-foreground flex items-center gap-1 transition-colors">
-                Learning <ChevronDown className="w-4 h-4 opacity-50" />
+                Developers <ChevronDown className="w-4 h-4 opacity-50" />
               </a>
             </div>
 
@@ -91,24 +91,24 @@ function App() {
         {/* Hero Content */}
         <main className="flex-1 flex flex-col items-center justify-center px-4 mt-16 mb-20">
           <div className="liquid-glass rounded-full p-1 pl-4 pr-1 flex items-center gap-3 mb-8">
-            <span className="text-sm font-medium">Nova+ Launched!</span>
+            <span className="text-sm font-medium">Edge Network Expanded</span>
             <div className="bg-white/5 rounded-full px-3 py-1 flex items-center gap-1 cursor-pointer hover:bg-white/10 transition-colors">
-              <span className="text-sm">Explore</span>
+              <span className="text-sm">View Map</span>
               <ChevronRight className="w-3 h-3 opacity-70" />
             </div>
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.05] max-w-5xl text-center text-hero-heading mb-6">
-            Accelerate Your<br />Revenue Growth Now
+            Planetary Scale<br />Infrastructure
           </h1>
 
           <p className="text-lg text-hero-sub opacity-80 max-w-md text-center mb-10">
-            Drive your funnel forward with clever workflows, analytics, and seamless lead management.
+            Deploy your applications globally with ultra-low latency, real-time synchronization, and resilient edge computing.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <Button variant="hero">Start Free Right Now</Button>
-            <Button variant="heroSecondary">Schedule a Consult</Button>
+            <Button variant="hero">Deploy for Free</Button>
+            <Button variant="heroSecondary">Talk to Engineering</Button>
           </div>
         </main>
 
@@ -116,7 +116,7 @@ function App() {
         <div className="w-full mt-auto mb-8 overflow-hidden flex items-center">
           <div className="max-w-[1400px] mx-auto w-full flex flex-col md:flex-row items-center gap-8 px-8">
             <p className="text-sm text-foreground/50 whitespace-nowrap shrink-0">
-              Relied on by brands across the globe
+              Powering global applications for innovative teams
             </p>
             
             {/* Marquee container */}
